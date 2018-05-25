@@ -6,6 +6,9 @@ metadata:
 spec:
   restartPolicy: "Never"
   volumes:
+  - name: explorer
+    persistentVolumeClaim:
+      claimName: explorer-pvc
   - name: composer-card-store
     persistentVolumeClaim:
       claimName: composer-pvc
